@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="todo.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="boards" id="boards">
+        <div class="board">
+          <div class="boardHeader">
+            <div id="title">To do</div>
+            <span class="count"> 1 </span>
+
+            <button id="add-button">Add Card</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modalContainer">
+      <div class="modal">
+        <!-- <div class="backdrop"></div> -->
+        <form class="form">
+          <div class="Garchig">Add Task</div>
+          <div class="title">
+            Title
+            <input class="title" />
+            <div class="helper-text">Бөглөнө үү</div>
+          </div>
+          <div class="title">
+            <div class="desc">Discription</div>
+            <input class="text" />
+          </div>
+          <div class="title">
+            <div class="desc">Status</div>
+            <select name="status" id="status">
+              <option value="todo">To Do</option>
+              <option value="inProgress">in Progress</option>
+              <option value="Stuck">Stuck</option>
+              <option value="Done">Done</option>
+            </select>
+          </div>
+          <div class="title">
+            <div class="pri">Priority</div>
+            <select name="status" id="priority">
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select>
+          </div>
+          <button class="button1">Add task</button>
+        </form>
+      </div>
+    </div>
+  </body>
+
+  <script src="todo.js"></script>
+</html>
+
+<!-- <div class="cards">
+            <div class="card">
+              <div class="done">
+                <div class="details">
+                  <h4>Todo</h4>
+                  <p>This is a todo card</p>
+                  <div class="priority">High</div>
+                </div>
+                <div class="actions">
+                  <div class="done">
+                    <div class="done"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->

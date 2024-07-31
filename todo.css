@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* body {
+  height: 100vh;
+  background-image: url(./pic.jpg) no-repeat center/cover;
+} */
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 0px 16px;
+}
+#zurag {
+  display: flex;
+}
+.modalContainer {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.boards {
+  display: flex;
+  gap: 16px;
+  padding: 120px 0px;
+  width: 1288px;
+  height: 448.5px;
+}
+.board {
+  display: flex;
+  justify-content: center;
+  width: 310px;
+  background-color: #ebecf0;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  position: relative;
+  overflow: hidden;
+}
+#title {
+  display: flex;
+}
+.count {
+  color: lightsteelblue;
+}
+.boardHeader {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 600;
+  width: 294px;
+  height: 39.5px;
+}
+#add-button {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+  width: 294px;
+  height: 35px;
+  border: none;
+  background-color: #ebecf0;
+}
+#add-button:hover {
+  background-color: gray;
+}
+/* .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 294px;
+  height: 102px;
+}
+.card {
+  display: flex;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: white;
+  cursor: grab;
+  display: flex;
+  gap: 12px;
+  width: 294px;
+  height: 102px;
+} */
+/* .done {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid rgb(0, 0, 0, 0.3);
+  width: 25px;
+  height: 25px;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+} */
+
+.backdrop {
+  display: flex;
+  z-index: 999;
+}
+.modal {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.garchig {
+  display: flex;
+  font-weight: bold;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+}
+.helper-text {
+  display: none;
+  color: red;
+  font-size: 12px;
+  padding: 4px 12px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.button {
+  background-color: black;
+  color: white;
+}
