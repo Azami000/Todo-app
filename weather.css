@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  background-color: black;
+}
+.title {
+  display: flex;
+  color: white;
+}
+.search {
+  display: flex;
+  flex-direction: row;
+  background-color: gray;
+  border-radius: 5px;
+}
+#searchIcon {
+  width: 16px;
+  height: 16px;
+}
+#searchInput {
+  border: none;
+  outline: none;
+  background-color: inherit;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-image: url(sky.jpeg);
+  padding: 12px;
+  border-radius: 14px;
+  width: 300px;
+}
+.left {
+  display: flex;
+}
+.time {
+}
+#cloud {
+  width: 18px;
+  height: 18px;
+}
