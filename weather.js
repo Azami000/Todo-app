@@ -68,15 +68,16 @@ const cardCompenent = (item) => {
 
   return `<div class="cards" style="background-image:url(${background})">
         <div class="card">
-          <div class="left"></div>
-          <div class="city">
-            ${city}
+          <div class="left">
+            <div class="city">
+              ${city}
+              <div class="temp">${temperature} <sup>0</sup></div>
+            </div>
             <div class="time">${time}</div>
           </div>
 
-          <div class="weather">${weather}</div>
           <div class="right">
-            <div class="temp">${temperature} <sup>0</sup></div>
+          <div class="weather">${weather}</div>
             <img id="icon" src=${iconImg} alt="" />
           </div>
         </div>
@@ -90,3 +91,9 @@ const render = () => {
 };
 
 render();
+
+// includes keyup
+
+const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("keyup", () => {});
