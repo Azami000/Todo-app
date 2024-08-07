@@ -8,7 +8,6 @@ body {
   /* justify-content: center; */
   /* align-items: center; */
   padding-top: 20px;
-  
 }
 .container {
   display: flex;
@@ -48,13 +47,16 @@ body {
   justify-content: space-between;
   padding: 15px;
   border-radius: 14px;
-  width: 270px;
+  background-image: url(./night-sky.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
+.card {
+  color: white;
+}
 .left {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 #icon {
@@ -63,4 +65,9 @@ body {
 }
 .right {
   display: flex;
+  justify-content: space-between;
+}
+.city {
+  display: flex;
+  justify-content: space-between;
 }

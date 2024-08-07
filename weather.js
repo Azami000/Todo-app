@@ -13,7 +13,7 @@ const weathers = [
     icon: 3,
     day: "day",
     time: new Date().toLocaleTimeString("en-US", {
-      timeZone: "America/New York",
+      timeZone: "America/New_York",
     }),
   },
   {
@@ -57,7 +57,7 @@ const dayNight = (day) => {
   if (day === "day") {
     return "./sky.jpeg";
   } else {
-    return "./night.jpg";
+    return "./night-sky.jpg";
   }
 };
 
@@ -83,12 +83,10 @@ const cardCompenent = (item) => {
       </div>`;
 };
 
-weathers.forEach((item) => {
-  newData.innerHTML += cardCompenent(item);
-});
+const render = () => {
+  weathers.forEach((item) => {
+    newData.innerHTML += cardCompenent(item);
+  });
+};
 
-// const render = () => {
-//   weathers.forEach((el) => {
-//     cards.innerHTML += cardCompenent(el);
-//   });
-// };
+render();
