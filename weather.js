@@ -61,10 +61,22 @@ const dayNight = (day) => {
   }
 };
 
-const cardCompenent = (item) => {
+const getGiphyData = async (searchInput) => {
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput}&units=Metric&appid=7c91776fb1267161889e298c3e7ceb4b`;
+  const result = await fetch(url);
+  const data = await result.json();
+  return data;
+};
+console.log(getGiphyData);
+
+const cardCompenent = async (item) => {
   const { icon, city, temperature, day, weather, time } = item;
   const iconImg = iconImgs[icon];
   const background = dayNight(day);
+
+  const data = await getGiphyData(city);
+
+  console.log({ data });
 
   return `<div class="cards" style="background-image:url(${background})">
         <div class="card">
@@ -84,16 +96,37 @@ const cardCompenent = (item) => {
       </div>`;
 };
 
-const render = () => {
-  weathers.forEach((item) => {
-    newData.innerHTML += cardCompenent(item);
+const render = (data) => {
+  newData.innerHTML = "";
+
+  data.forEach(async (item) => {
+    newData.innerHTML += await cardCompenent(item);
   });
 };
 
-render();
+render(weathers);
 
 // includes keyup
 
 const searchInput = document.getElementById("searchInput");
 
-searchInput.addEventListener("keyup", () => {});
+searchInput.addEventListener("keyup", async (el) => {
+  if (el.key === "Enter") {
+    const result = await getGiphyData(searchInput.value);
+    console.log(reuslt);
+  }
+  const tsagagaar={
+    city:searchInput.value
+    temperature:result.main.temp,
+    sky:result.weather[0].main
+    icon:
+    day:"day"
+    time:new Date().toLocaleTimeString(result.sys.country),
+
+}
+render(tsagagaar)
+//   // const filteredWeathers = weathers.filter((weather) => {
+//   //   return weather.city.toLocaleLowerCase().includes(searchInput.value);
+//   // });
+//   // render(filteredWeathers);
+});
